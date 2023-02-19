@@ -39,3 +39,16 @@ Schema::create('school_records', function (Blueprint $table) {
 // ~~~~~~~~~ how to validate form field ~~~~~~~~~~~~~~~`
 <input type="text" class="form-control" name="school_name" placeholder="School Name *" value="{{old('school_name')}}" />
 {!! $errors->first('school_name', '<label class="error text-danger">:message</label>') !!}
+
+php artisan config:Cache
+
+// database command
+php artisan make:migration create_tablename_table
+php artisan migrate
+php artisan migrate:rollback // delete table
+php artisan migrate:refresh // delete atable and insert all tables
+php artisan make:migration add_columns_to_tableName_table // new migrate create with up and doun function
+$table->string('col_name', 50)->nullable()->after('col_name');
+
+// create model
+php artisan make:model Modelname (first letter of model should be in capital letter) 
