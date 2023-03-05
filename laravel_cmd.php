@@ -50,5 +50,7 @@ php artisan migrate:refresh // delete atable and insert all tables
 php artisan make:migration add_columns_to_tableName_table // new migrate create with up and doun function
 $table->string('col_name', 50)->nullable()->after('col_name');
 
-// create model
-php artisan make:model Modelname (first letter of model should be in capital letter) 
+// create model (first letter of model should be in capital letter)
+php artisan make:model Modelname
+// create model with migration
+php artisan make:model Modelname --migration
